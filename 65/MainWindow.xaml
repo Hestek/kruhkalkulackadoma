@@ -1,0 +1,41 @@
+﻿<Window x:Class="_65.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_65"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="vypocitejButton" Content="Vypočítej" Margin="50,10,50,12" Grid.Row="1" Click="vypocitejButton_Click"/>
+        <TextBox x:Name="cislo1TextBox" Text="" TextWrapping="Wrap" Margin="50,38,483,21" RenderTransformOrigin="0.429,0.484"/>
+        <ComboBox x:Name="operaceComboBox" Margin="162,38,340,21">
+            <ComboBoxItem Content="mm"/>
+            <ComboBoxItem Content="cm"/>
+            <ComboBoxItem Content="dm"/>
+            <ComboBoxItem Content="m"/>
+        </ComboBox>
+        <TextBlock x:Name="vysledekTextBlock" Text="" TextWrapping="Wrap" Margin="349,29,52,37" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="vysledekTextBlock2" HorizontalAlignment="Left" Height="17" Margin="349,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <TextBlock Text="r=" TextWrapping="Wrap" Margin="10,38,550,20"/>
+        <TextBlock Text="o=" TextWrapping="NoWrap" Margin="288,29,251,35"/>
+        <TextBlock Text="s=" TextWrapping="NoWrap" Margin="288,57,251,5"/>
+
+    </Grid>
+</Window>
